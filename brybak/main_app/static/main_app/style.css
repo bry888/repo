@@ -1,0 +1,20 @@
+body {
+    background-color: grey;
+}
+
+.header {
+	color: white;
+	background-color: blue;
+}
+
+.log {
+	float: right;
+}
+
+.article {
+	
+}
+
+.error {
+	color: red;
+}

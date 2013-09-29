@@ -1,0 +1,14 @@
+{% extends "main_app/index.html" %}
+{% block title %}{{ story.title }}{% endblock %}
+{% block content %}
+<p>Witaj w aplikacji BRYBAK! Poniżej znajdziesz listę artykułów wybranych specjalnie dla ciebie!</p>
+<br>
+<div class="articles">
+<form action="{% url 'main_app:user_view' article.id %}" method="get">
+{% for article in user.article_set.all %}
+	<h2>{{ article.title }}</h2>
+	<h4>{{ article.subtitle }}</h4>
+{% endfor %}
+</form>
+</div>
+{% endblock %}
