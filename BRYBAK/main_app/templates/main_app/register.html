@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+
+{% if error1 %}<p><strong>Formularz wypełniony niepoprawnie. Spróbuj ponownie.</strong></p>{% endif %}
+{% if error2 %}<p><strong>Użytkownik o tej nazwie już istnieje. Wybierz inną nazwę.</strong></p>{% endif %}
+
+{% endif %}
+
+<form method="post" action="{% url 'register' %}">
+{% csrf_token %}
+<table>
+<tr>
+    <td>{{ form.username.label_tag }}</td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>Hasło</td>
+    <td>{{ form.password }}</td>
+</tr>
+<tr>
+    <td>Powtórz hasło</td>
+    <td>{{ form.password2 }}</td>
+</tr>
+</table>
+
+<input type="submit" value="login" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}

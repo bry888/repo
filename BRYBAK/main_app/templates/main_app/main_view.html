@@ -1,0 +1,32 @@
+{% extends "main_app/index.html" %}
+{% block title %}{{ story.title }}{% endblock %}
+{% block content %}
+	<table class='log'>
+		<tr>
+			<td><a href="{% url 'main_app:register' %}">Stwórz konto</a></td>
+			<td><a href="{% url 'main_app:login' %}">Zaloguj</a></td>
+		</tr>
+	</table>
+<p>Brybak RSS pozwoli ci być na bierząco i radować się informacyją! Dzięki arcy-skomplikowanemu algorytmowi spreparowanemu przez najwybitniejsze umysły kraju możesz być pewien, że otrzymasz wyłącznie interesujące cię artykuły! Już teraz <a href="{% url 'main_app:register' %}">załóż konto</a>!</p>
+
+
+{% if list_of_best_articles %}
+    <div>
+	
+    {% for article in list_of_best_articles %}
+	<div class="articles">
+		<div>
+			<a id='title' href="{% url 'main_app:article' article.id %}"><h2>{{ article.title }}</h2></a>
+		</div>
+		<div class='toggle'>
+			<h4>{{ article.subtitle }}</h4>
+		</div>		
+	</div>
+    {% endfor %}
+
+	</div>
+{% else %}
+    <p>Brak dostępnych artykułów.</p>
+{% endif %}
+
+{% endblock %}

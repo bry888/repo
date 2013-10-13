@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main_app/style.css' %}" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'main_app/script.js' %}"></script>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div id='header'>
+	<h1>BRYBAK RSS</h1>
+	<h3>Najlepsze polskie artykuły</h3>
+	</div>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>

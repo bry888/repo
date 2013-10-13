@@ -1,0 +1,25 @@
+body {
+    background-color: grey;
+}
+
+#header {
+	color: white;
+	background-color: blue;
+}
+
+.log {
+	float: right;
+}
+
+.articles {
+	background-color: black;
+	color: white;
+}
+
+.error {
+	color: red;
+}
+
+.frame {
+    display: inline-block;
+}
