@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link href="/stylesheets/blog.css" rel="stylesheet" type="text/css">
+	<title>blog</title>
+</head>
+<body>
+	<h1><b>Blog</b></h1>
+	<br>
+	{% post.render() %}
+	<!--
+	{% for post in comments %}
+		<div class="com">
+			<div class="com-title"><b>{{post.subject}}</b></div>
+			<div class="com-created">{{post.created}}</div>
+			<hr>
+			<pre class="com-body">{{post.blog}}</pre>
+			<br>
+		</div>
+	{% end for %}
+	-->
+</body>
+</html>

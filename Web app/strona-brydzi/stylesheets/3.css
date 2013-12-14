@@ -1,0 +1,31 @@
+body {
+	background-color: pink;
+	margin-left: 100px;
+	}
+h1 {
+	color: #3e1111;
+	}
+span {
+	font-weight: bold;
+	color: #7F462C;
+	}
+textarea {
+	width: 500px;
+	height: 180px;
+	}
+input {
+	width: 220px;
+	}
+.error {
+	color: red;
+	}
+.ramka {
+	background-color: #0f9eec;
+	padding: 30px;
+	border-radius: 10px;
+	width: 530px;
+	}
+#prawo {
+	width: 50px;
+	float: right;
+	}

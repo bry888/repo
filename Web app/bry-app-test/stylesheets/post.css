@@ -1,0 +1,13 @@
+body {
+	margin-left: 70px;
+	}
+input {
+	width: 300px;
+	}
+textarea {
+	height: 100px;
+	width: 300px;
+	}
+.error {
+	color: red;
+	}

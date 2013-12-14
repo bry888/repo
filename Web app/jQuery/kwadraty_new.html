@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magic!</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="kwadraty.css"/>
+		<script type="text/javascript" src="kwadraty.js"></script>
+    </head>
+    <body>
+
+
+        
+    <a href="http://jquery.com/">jQuery</a>
+    
+    <script>
+ 
+    $( document ).ready(function() {
+        $( "a" ).click(function( event ) {
+            alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+        });
+    });
+ 
+    </script>
+
+
+
+
+<div id="red"></div>
+        <div id="blue"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+		<div id="disappear"></div> 
+    </body>
+</html>

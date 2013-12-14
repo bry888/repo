@@ -1,0 +1,45 @@
+body {
+	background-color: pink;
+	}
+div {
+	margin: 0px auto;
+	width: 200px;
+	height: 300px;
+	}
+.blue {
+	height: 400px;
+	width: 310px;
+	background-color: #0f9eec;
+	position: absolute;
+	border-radius: 10px;
+	margin-left: -90px;
+	}
+.white {
+	background-color: #ffffcc;
+	padding: 30px 50px 50px 50px;
+	border-radius: 10px;
+	margin-top: 60px;
+	position: absolute;
+	}
+h1 {
+	text-align: center;
+	color: #3e1111;
+	}
+h2 {
+	text-align: center;
+	color: #7F462C;
+	}
+h4 {
+	color: #3e1111;
+	}
+.error {
+	color: red;
+	}
+#lewo {
+	width: 50px;
+	float: left;
+	}
+#prawo {
+	width: 50px;
+	float: right;
+	}

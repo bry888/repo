@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link href="/stylesheets/blog.css" rel="stylesheet" type="text/css">
+	<title>blog</title>
+</head>
+<body>
+	<h1><b>Blog</b></h1>
+	<br>
+	{% for com in comments %}
+		<div class="com">
+			<div class="com-title"><b>{{com.subject}}</b></div>
+			<div class="com-created">{{com.created.strftime("%b %d, %Y")}}</div>
+			<hr>
+			<pre class="com-body">{{com.blog}}</pre>
+			<br>
+		</div>
+	{% endfor %}
+	
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<link href="/stylesheets/4.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
+	<title>Dowiedz się kim jesteś!</title>
+</head>
+<body>
+<body>
+<div class="all">
+<form>
+	<br>
+	<h1>Komentarze</h1>
+	<br>
+<div id="linia">
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>
+<img src="http://www.puby.com/wp-content/themes/yoho/images/serduszko.png"/>			
+</div>
+</form>
+	
+	{% for comment in comments %}
+		<div class="comments">
+			<div class="nick"><b>{{comment.nick}}</b></div>
+			<div class="created">{{comment.created.strftime("%d %b %Y")}}</div>
+			<div class="comm">{{comment.comment}}</div>
+		</div>
+	{% endfor %}
+</div>
+</body>
+</html>

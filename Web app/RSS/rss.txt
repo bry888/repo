@@ -1,0 +1,10 @@
+background: #b48526; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #b48526 17%, #dfac11 38%, #eae664 50%, #dfac11 64%, #b48526 88%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(17%,#b48526), color-stop(38%,#dfac11), color-stop(50%,#eae664), color-stop(64%,#dfac11), color-stop(88%,#b48526)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #b48526 17%,#dfac11 38%,#eae664 50%,#dfac11 64%,#b48526 88%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #b48526 17%,#dfac11 38%,#eae664 50%,#dfac11 64%,#b48526 88%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #b48526 17%,#dfac11 38%,#eae664 50%,#dfac11 64%,#b48526 88%); /* IE10+ */
+background: linear-gradient(135deg,  #b48526 17%,#dfac11 38%,#eae664 50%,#dfac11 64%,#b48526 88%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b48526', endColorstr='#b48526',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+button middle sparkle

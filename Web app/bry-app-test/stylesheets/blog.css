@@ -1,0 +1,23 @@
+body {
+	margin-left: 50px;
+	margin-right: 50px;
+	}
+h1 {
+	text-align: center;
+	}
+.com {
+	margin: 0 auto;
+	position: relative;
+	}
+.com-subject {
+	font-size: 1.2em;
+	display: inline-block;
+	}
+.com-created {
+	color: gray;
+	font-size: 0.7em;
+	text-align: right;
+	}
+.com-blog {
+	font-size: 0.9em;
+	}

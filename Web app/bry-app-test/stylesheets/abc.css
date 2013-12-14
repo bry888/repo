@@ -1,0 +1,22 @@
+body {
+	color: red;
+	}
+label {
+	display: block;
+	}
+textarea {
+	width: 400px;
+	height: 200px;
+	}
+.art {
+	font-size: 40px;
+	}
+.art-title {
+	font-size: 30px;
+	}
+.error {
+	color: red;
+	}
+.art-body {
+	color: black;
+	}
