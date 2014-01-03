@@ -1,0 +1,28 @@
+body {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 80px;
+    /* tlo w samolociki ! :D */
+    background: url('images/plane.gif'); /* default repeat */
+}
+
+.index {
+    background-color: #64bec7;
+    padding: 20px 100px 20px 100px; /* top right bottom left */
+    /*position: fixed;*/
+}
+
+.header {
+    display: inline-block;
+}
+
+.form {
+    float: right;
+}
+
+.output {
+    margin-top: 20px;
+    background-color: #64bec7;
+    opacity: 0.9;
+    padding: 20px 100px 20px 100px; /* top right bottom left */
+}

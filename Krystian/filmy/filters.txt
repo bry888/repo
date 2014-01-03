@@ -1,0 +1,4 @@
+hdtv
+tvrip
+brrip
+dvdrip
