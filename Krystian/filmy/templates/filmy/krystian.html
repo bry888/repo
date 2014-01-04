@@ -15,13 +15,14 @@
 <div class="index">
 	<div class='header'>
 	<h1>TORRENTlista</h1>
-	<h3>Wyszukiwane frazy: dvdrip hdtv tvrip brrip</h3>
+	<h3>Wyszukiwane frazy:  <span style="color: #3A3737">dvdrip hdtv tvrip brrip</span></h3>
 	</div>	
 </div>
 <br>
-        <ul>
+        <ul class="output">
 	{% for item in data %}
-	    <li>{{ item.NAME }} -- {{ item.SEEDS }} | {{ item.PEERS }}<br><a href="{{ item.URL }}"</a></li>
+	    <!--<li>{{ item.name }} -- {{ item.seeds }} | {{ item.peers }} <a href="{{ item.url }}">move to download page</a></li>-->
+	    <li>{{item.NAME}} <br> SEEDS: {{item.SEEDS}} | PEERS: {{item.PEERS}} <a href="{{item.URL}}">Pobierz ze strony</a></li>
 	{% empty %}
 	<p>Brak wyników wyszukiwania.</p>
 	{% endfor %}
