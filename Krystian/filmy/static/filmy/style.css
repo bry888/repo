@@ -18,6 +18,8 @@ body {
 
 .form {
     float: right;
+    position: relative;
+    top: 80px;
 }
 
 .output {
@@ -42,4 +44,10 @@ a:hover {
 
 a:visited {
     color: #361e03;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    text-align: center;
 }

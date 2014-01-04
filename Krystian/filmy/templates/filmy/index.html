@@ -15,18 +15,23 @@
 <div class="index">
 	<div class='header'>
 	<h1>TORRENTlista</h1>
-	<h2>Dodaj frazy, które chcesz wyszukać:</h2>
+	<h3>Wpisz frazy, które chcesz wyszukać:</h3>
 	</div>
 
 	<div class="form">
 	{% block form %}
-	<!--{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}-->
+
 	<form method="post">{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Submit" />
+
+	{{ form.query }}
+	<!-- {{ form.as_p }} -->
+	<input type="submit" value="Szukaj" name="Szukaj"/>
+
+	{% if form.query.errors %}
+		<p class="error">To pole jest wymagane</p>
+	{% endif %}
 	</form>
 	
-	<input type="button" value="więcej" id="add_phrase" />
 	{% endblock %}
 	</div>
 </div>

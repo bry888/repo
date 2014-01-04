@@ -19,5 +19,7 @@ class Film(models.Model):
     
 class SearchForm(forms.Form):
     query = forms.CharField(max_length=200)
-    def show_result(self):
-        pass #skrypt piotra
+    
+    def __unicode__(self):
+        return "Szukaj:"
+    
