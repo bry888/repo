@@ -8,9 +8,10 @@ import sqlite3
 from filmy.models import Film, SearchForm
 
 from django.utils import timezone
-#import memcache
-#from django.views.decorators.cache import cache_page
 
+from django.views.decorators.cache import cache_page
+
+@cache_page(60 * 60, cache="default")
 def torrent(request):
     return render_to_response('filmy/torrent.html')
 
@@ -24,7 +25,7 @@ def dictfetchall(cursor):
     ]
 
 
-#@cache_page(60 * 10)
+@cache_page(60 * 15, cache="default")
 def search(request):
     search_phrase = ''
     
@@ -68,6 +69,7 @@ def search(request):
     return render(request, 'filmy/index.html', {'form':form}) #initial={'sth':'drhtv'} from cookie or none
     
     
+@cache_page(60 * 15, cache="default")
 def krystian(request):
     #data = Film.objects.raw("""SELECT * FROM filmy_film WHERE NAME LIKE "%dvdrip%" OR NAME LIKE "%hdtv%" OR NAME LIKE "%tvrip%" OR NAME LIKE "%brrip%" """)
     #data = Film.objects.get(Q(name__contains='dvdrip') | Q(name__contains='hdtv') | Q(name__contains='tvrip') | Q(name__contains='brrip'))[:5]

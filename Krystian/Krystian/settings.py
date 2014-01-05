@@ -92,12 +92,12 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
-#CACHES = {
- #   'default': {
-  #      'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-   #     'LOCATION': '127.0.0.1:11211',
-    #}
-#}
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
+        'LOCATION': '54.244.199.179:11211',
+    }
+}
 
 #CACHES = {
  #   'default': {
@@ -108,9 +108,9 @@ TEMPLATE_LOADERS = (
 #}
 
 MIDDLEWARE_CLASSES = (
-   # 'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.cache.FetchFromCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -119,9 +119,9 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-#CACHE_MIDDLEWARE_ALIAS = '/usr/local/lib/python2.7/dist-packages/django/bin/Krystian/'
-#CACHE_MIDDLEWARE_SECONDS = 300
-#CACHE_MIDDLEWARE_KEY_PREFIX = 'filmy'
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_SECONDS = 600
+CACHE_MIDDLEWARE_KEY_PREFIX = 'filmy'
 
 ROOT_URLCONF = 'Krystian.urls'
 
