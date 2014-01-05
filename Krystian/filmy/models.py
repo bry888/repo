@@ -20,6 +20,4 @@ class Film(models.Model):
 class SearchForm(forms.Form):
     query = forms.CharField(max_length=200)
     
-    def __unicode__(self):
-        return "Szukaj:"
     

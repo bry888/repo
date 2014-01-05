@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TORRENTlista</title>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'filmy/style.css' %}" />
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    
+    <div class="index">
+	<div class='header'>
+	<h1>TORRENTlista</h1>
+	<h3>Wyszukaj filmy zawierające interesujące cię frazy</h3>
+	<p>Wyszukiwarka znajdzie wszystkie pozycje zawierające przynajmniej jedną z podanych fraz. Jeśli szukasz "How I Met Your Mother" skorzystaj ze zwykłej wyszukiwarki. :D</p>
+	</div>
+    </div>
+    
+    <a href="/filmy/search/">
+    <div class="torrent" id="search">
+        <p>Jeśli szukasz najnowszych filmów kliknij tutaj.</p>
+    </div></a>
+    
+    <a href="/filmy/krystian/">
+    <div class="torrent" id="krystian">
+        <p>Jeśli jesteś Krystianem kliknij tutaj.</p>
+    </div></a>
+    
+</body>
+</html>

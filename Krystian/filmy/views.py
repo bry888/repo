@@ -11,8 +11,8 @@ from django.utils import timezone
 #import memcache
 #from django.views.decorators.cache import cache_page
 
-def filmy(request):
-    return render_to_response('filmy.html')
+def torrent(request):
+    return render_to_response('filmy/torrent.html')
 
 
 def dictfetchall(cursor):

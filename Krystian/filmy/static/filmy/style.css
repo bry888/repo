@@ -51,3 +51,27 @@ a:visited {
     font-size: 0.8em;
     text-align: center;
 }
+
+.torrent {
+    margin: 30px 20px 0px 20px;
+    background-color: #64bec7;
+    opacity: 0.9;
+    padding: 40px 100px 40px 100px; /* top right bottom left */
+    font-size: 1.3em;
+    height: 100px;
+    width: 25%;
+    color: #B75A03;
+}
+
+#search {
+    display: inline-block;
+}
+
+#krystian {
+    float: right;
+}
+
+#search:hover, #krystian:hover {
+    background-color: blue;
+    color: #B75A03;
+}
