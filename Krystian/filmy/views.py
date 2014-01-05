@@ -37,10 +37,6 @@ def search(request):
             
             query = form.cleaned_data['query']
             
-            #send cookie
-            response = HttpResponse(query)
-            response.set_cookie('s_ph', query)
-            
             q = query.split(' ')
             select = """SELECT name, seeds, peers, url FROM torrenty WHERE"""
             for i in q:
@@ -57,13 +53,17 @@ def search(request):
             finally:
                 conn.close()
             
+            #send cookie
+            response = render_to_response('filmy/output.html', {'data':data, 'form':form, 'search_phrase':query,})
+            response.set_cookie('s_ph', query)
             
-            return render(request, 'filmy/output.html',
-                         {'data':data, 'form':form, 'search_phrase':search_phrase,})
+            return response
+           # return render(request, 'filmy/output.html',
+               #          {'data':data, 'form':form, 'search_phrase':search_phrase,})
 
     else:
         #invalid data
-        form = SearchForm()
+        form = SearchForm(initial={'query': search_phrase})
        
     return render(request, 'filmy/index.html', {'form':form}) #initial={'sth':'drhtv'} from cookie or none
     
