@@ -95,7 +95,8 @@ TEMPLATE_LOADERS = (
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
-        'LOCATION': '54.244.199.179:11211',
+       # 'LOCATION': '10.245.125.84:11211',
+        'LOCATION': '127.0.0.1:11211',
     }
 }
 

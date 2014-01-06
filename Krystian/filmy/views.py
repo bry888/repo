@@ -25,7 +25,6 @@ def dictfetchall(cursor):
     ]
 
 
-@cache_page(60 * 15, cache="default")
 def search(request):
     search_phrase = ''
     
