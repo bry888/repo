@@ -1,0 +1,131 @@
+body {
+    background-color: black;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.navigation {
+    display: block;
+    margin: 20px 40px 10px 40px;
+    color: white;
+}
+.nav_a {
+    display: inline-block;
+    border: white double 1px;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 3px;
+    text-decoration: none;
+    background-color: white;
+    margin: 2px 0px 2px 0px;
+}
+.nav_a_hover {
+    color: white;
+    background-color: #C90000;
+}
+.navigation a:link {color: black;}
+.navigation a:hover {color: white; background-color: #C90000;}
+.navigation a:visited {color: black;}
+
+.bar {
+    background-color: #C90000;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 40px 0px 120px;
+    color: white;
+}
+
+.bar .title {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.bar a p {
+    float: right;
+    text_decoration: none;
+    font-size: 0.9em;
+}
+.bar a:link {color: white;}
+.bar a:hover {color: black;}
+.bar a:visited {color: white;}
+
+#end {
+    clear: both;
+    text-align: right;
+    overflow: hidden;
+    height: 46px;
+}
+
+
+.comment {
+    padding: 10px;
+    background-color: white;
+    border-bottom: #C90000 solid 1px;
+    border-top: #C90000 solid 1px;
+}
+.comments {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 10px 30px 30px 30px;
+}
+.com_page {
+    float: left;
+    margin: 10px 0px 10px 40px;
+    width: 60%;
+    height: 350px;
+    padding: 10px 20px 10px 20px;
+}
+.com {
+    overflow: auto;
+    height: 80%;
+    padding-right: 10px;
+}
+.comment .name { display: inline-block; font-weight: bold;}
+.comment .date { float: right; }
+.comment .content {
+    display: block;
+    font-size: 0.9em;
+}
+
+.page_n {
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.page_n_hover {
+    color: #C90000;
+}
+
+.form {
+    margin: 10px 40px 10px 0px;
+    background-color: white;
+    padding: 20px 20px 30px 20px;
+    float: right;
+    width: 24%;
+    height: 320px;
+    border-bottom: #C90000 solid 1px;
+    border-top: #C90000 solid 1px;
+}
+input {float: right;}
+
+.text {
+    width: 100%;
+    height: 150px;
+}
+
+.error {
+    color: red;
+}
+
+.404error {
+    color: red;
+    font-size: 4em;
+}
+.404text {
+    color: white;
+}

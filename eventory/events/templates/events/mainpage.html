@@ -1,0 +1,28 @@
+{% extends "events/index.html" %}
+{% block title %}Welcome to Eventory!{% endblock %}
+{% block content %}
+
+{% load static %}
+
+<a class="add" href="/events/add_event/">Dodaj wydarzenie</a>
+
+<div class="events_list">
+    
+	{% for item in data %}
+        <div class="event">
+            <div class="info">
+                <p><span class="name">{{item.NAME}}</span><span class="date">{{item.START_TS}}</span></p>
+            </div>
+            <div class="details">
+                <p>{{item.RAW_TEXT}}</p>
+                <p class="location">{{item.LOCATION}}</p>
+                <p class="url"><a href="{{item.URL}}">Strona wydarzenia</a></p>
+            </div>
+        </div>
+	{% empty %}
+	<p>Brak wyników wyszukiwania.</p>
+	{% endfor %}
+
+</div>
+        
+{% endblock %}

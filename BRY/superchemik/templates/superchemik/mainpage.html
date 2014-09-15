@@ -1,0 +1,68 @@
+{% extends "superchemik/index.html" %}
+{% block title %}Super Chemik{% endblock %}
+{% block content %}
+
+{% load static %}
+{#<img src="{% static 'superchemik/images/60pr.png' %}"/>#}
+
+<script type="text/javascript"> 
+   var page_now = "{{page_id}}";
+</script>
+
+<div class="bar">
+    <p class="title">Komiks o Super Chemiku</p>
+    <a href="/superchemik/komentarze/"><p>Czytaj komentarze</p></a>
+</div>
+
+
+<img src="{% static 'superchemik/images/'|add:page.image_name|add:'.png' %}"/>
+
+
+<p class="navigation">Wybierz stronę:
+{% for p in pages %}
+    <a id="{{p.id}}" class="nav_a" href="/superchemik/{{p.id}}">{{ p.id }}</a>
+    {#<a href="{{p.get_absolute_url}}">{{ p.id }}</a>#}
+{% endfor %}</p>
+
+<!-- id=r form post goes to comments automaticly -->
+<div class="comment com_page" id="r">
+    <h2>Komentarze</h2>
+    
+<div class="com">
+{% for com in comments %}
+    <div class="entry">
+    <div><p class="name">{{ com.name }}</p> <p class="date">{{ com.date }}</p></div>
+    <div class="content">{{ com.content }}</div>
+    </div>
+{% empty %}
+    <p>Brak komentarzy.</p>
+{% endfor %}
+</div>
+
+</div>
+
+
+
+<div class="form" id="form">
+    <h2>Dodaj komentarz</h2>
+    
+	{% block form %}
+
+	<form method="post" action="/superchemik/{{page.id}}/#r">{% csrf_token %}
+
+	<p>Nick{{ form.name }}</p>
+	<p>Twój komentarz</p>
+        {{ form.content }}
+	<!-- {{ form.as_p }} -->
+	<br><input type="submit" value="Dodaj" name="Dodaj"/>
+
+	{% if form.name.errors or form.content.errors %}
+	    <p class="error">Obydwa pola są wymagane.</p>
+	{% endif %}
+	</form>
+	
+        {% endblock %}
+    
+</div>
+
+{% endblock %}

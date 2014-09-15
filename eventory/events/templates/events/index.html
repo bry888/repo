@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Eventory!</title>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'events/style.css' %}" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'events/script.js' %}"></script>
+
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div class="header">
+        Eventory
+    </div>
+
+    	{% block content %}
+	{% endblock %}
+    
+</body>
+</html>

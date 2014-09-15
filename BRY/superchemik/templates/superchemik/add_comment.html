@@ -1,0 +1,27 @@
+{% extends "superchemik/index.html" %}
+{% block title %}Super Chemik{% endblock %}
+{% block content %}
+
+<h1>Dodaj komentarz</h1>
+
+<div class="form">
+	{% block form %}
+
+	<form method="post">{% csrf_token %}
+
+	<p>Nick</p>
+	{{ form.name }}
+	<p>Twój komentarz</p>
+        {{ form.content }}
+	<!-- {{ form.as_p }} -->
+	<input type="submit" value="Dodaj" name="Dodaj"/>
+
+	{% if form.name.errors or form.content.errors %}
+	    <p class="error">Obydwa pola są wymagane.</p>
+	{% endif %}
+	</form>
+	
+	{% endblock %}
+</div>
+
+{% endblock %}

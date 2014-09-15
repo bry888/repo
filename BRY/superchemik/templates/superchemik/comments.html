@@ -1,0 +1,25 @@
+{% extends "superchemik/index.html" %}
+{% block title %}Super Chemik{% endblock %}
+{% block content %}
+
+<div class="bar">
+    <p class="title">Komiks o Super Chemiku</p>
+    <a href="/superchemik/{{page_num}}"><p>Czytaj komiks</p></a>
+</div>
+        
+
+<div class="comment comments">
+    
+<h2>Komentarze</h2>
+{% for com in comments %}
+    <div class='entry'>
+    <p class="name">{{ com.name }}</p> <p class="date">{{ com.date }} | <a href="/superchemik/{{com.page_num.id}}" class="page_n" title="Przejdź do strony komentarza">{{ com.page_num.id }}</a></p>
+    <p class="content">{{ com.content }}</p>
+    </div>
+{% empty %}
+    <p>Brak komentarzy.</p>
+{% endfor %}
+
+</div>
+
+{% endblock %}

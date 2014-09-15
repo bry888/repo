@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Super Chemik</title>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'superchemik/style.css' %}" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'superchemik/script.js' %}"></script>
+
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    	{% block content %}
+	{% endblock %}
+    
+<div id="end" class="bar">
+    <a href=/superchemik/regulamin/><p>Regulamin</p></a>
+</div>
+    
+</body>
+</html>
